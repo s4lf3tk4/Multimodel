@@ -17,7 +17,6 @@ def systematization(state: SystemState)->None:
 
     if not combined:
         print("Нет данных для систематизации")
-        return {"should_continue": True}
 
 
     analyzeDialog_chain = analyzeDialog_prompt | llm_gpt_54 | analyzeDialog_parser

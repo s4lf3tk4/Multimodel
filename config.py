@@ -32,5 +32,6 @@ llm_gpt_41 = ChatOpenAI(
 #dialog+analysis
 llm_mistral = ChatOllama(
     model="mistral",
+     base_url="http://localhost:11434",
     num_predict=2000
 )

@@ -6,8 +6,6 @@ from config import llm_mistral
 
 def userInput(state: SystemState)->dict:
     user_input = input("Вы: ").strip()
-    if user_input.lower() in ["выход", "quit", "exit", "пока", "bye"]:
-        return {"should_continue": False}
     if not user_input:
         print("Спросите что-нибудь")
         return {}

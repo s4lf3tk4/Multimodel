@@ -38,7 +38,7 @@ classification_prompt = PromptTemplate(template = """Определи тип с�
 
     Верни ТОЛЬКО JSON!
 """,
-    input_variables = ["topics"],
+    input_variables = ["user_input"],
     partial_variables={"format_instructions": classification_parser.get_format_instructions()}
 )
 
