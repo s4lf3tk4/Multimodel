@@ -1,4 +1,3 @@
-from langchain_ollama import ChatOllama
 from langchain_core.messages import SystemMessage, HumanMessage, BaseMessage, AIMessage
 from langgraph.graph import StateGraph, START, END
 from typing import TypedDict, List, Literal
@@ -41,10 +40,4 @@ classification_prompt = PromptTemplate(template = """Определи тип з�
 """,
     input_variables = ["user_input"],
     partial_variables={"format_instructions": classification_parser.get_format_instructions()}
-)
-
-#llm
-llm = ChatOllama(
-    model="mistral",
-    num_predict=2000
 )
