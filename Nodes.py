@@ -30,11 +30,3 @@ def classifyMessage(state: SystemState)-> dict:
     return{
         "message_type": message_type,
     }
-
-def systematization(state: SystemState)->dict:
-    if state["code"]:
-        print(1)
-    if state["dialog"]:
-        print(2)
-    if state["local"]:
-        print(3)
