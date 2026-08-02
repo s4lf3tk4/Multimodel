@@ -42,11 +42,11 @@ Multimodel представляет собой граф, который испо
 
 #### Пояснение
 <div align = 'left'>
-<font color="green">Зеленый цвет - узлы графа (прямоугльники на диаграмме)</font>
+🟢Зеленый цвет - узлы графа (прямоугльники на диаграмме)
 
-<font color="pink">Розовый цвет - функция-роутер (ромбы на диаграмме)</font>
+🟣Фиолетовый цвет - функция-роутер (ромбы на диаграмме)
 
-1)  <font color="green">**userInput**</font> - функция ввода сообщения пользователя
+1)  🟢**userInput** - функция ввода сообщения пользователя
    
       Возвращаемые данные  
          
@@ -67,7 +67,7 @@ def userInput(state: SystemState)->dict:
 ```
 
 
-2) <span style="color: pink;">**routerAfterInput**</span> - маршрутизатор ввода userInput
+2) 🟣**routerAfterInput** - маршрутизатор ввода userInput
 
       Возвращаемые данные   
          
@@ -83,7 +83,7 @@ def routerAfterInput(state: SystemState)->str:
          return "classify"
 ```
 
-3) <span style="color: green;">**classifyMessage**</span> - классификация сообщений через LCEL с использование Pydantic для структурированного вызова: [calss ClassifyMessage(BaseModel)](#cl-me)
+3) 🟢**classifyMessage** - классификация сообщений через LCEL с использование Pydantic для структурированного вызова: [calss ClassifyMessage(BaseModel)](#cl-me)
 
       Возвращаемые данные   
 - message_type: str - [Типы сообщений](#message-types)
@@ -108,7 +108,7 @@ def classifyMessage(state: SystemState)-> dict:
     }
 ```
 
-4) <span style="color: pink;">**routerAfterClassification**</span> - маршрутизатор для вызова нужной LLM
+4) 🟣**routerAfterClassification** - маршрутизатор для вызова нужной LLM
 
    [Возвращаемые данные](#message-types)   
   - code -> codeAnswer()
@@ -128,7 +128,7 @@ def routerAfterClassification(state: SystemState)-> str:
     return "dialog"
 ```
 
-5.1. <span style="color: green;">**codeAnswer**</span> - узел обработки кода с помощью gpt-4o-mini
+5.1. 🟢**codeAnswer** - узел обработки кода с помощью gpt-4o-mini
 
    Возвращаемые данные  
    - messages: List[BaseMessage]
@@ -149,7 +149,7 @@ def codeAnswer(state: SystemState)->dict:
     }
 ```
 
-5.2. <span style="color: green;">**localDialog**</span> - узел обработки вопроса об РФ с помощью gpt-4.1-mini
+5.2. 🟢**localDialog** - узел обработки вопроса об РФ с помощью gpt-4.1-mini
 
    Возвращаемые данные  
    - messages: List[BaseMessage]
@@ -169,7 +169,7 @@ def localDialog(state: SystemState)->dict:
         "local": result
     }
 ```
-5.3. <span style="color: green;">**dialogOver**</span> - узел обработки прощания с пользователем с помощью mistral
+5.3. 🟢**dialogOver** - узел обработки прощания с пользователем с помощью mistral
 
    Возвращаемые данные: Отсутствуют
 
@@ -184,7 +184,7 @@ def dialogOver(state: SystemState)->None:
     new_messages = state["messages"]+ [AIMessage(content = result)]
 
 ```
-5.4. <span style="color: green;">**dialog**</span> - узел обработки ведения диалога с помощью mistral
+5.4. 🟢**dialog** - узел обработки ведения диалога с помощью mistral
 
    Возвращаемые данные  
    - messages: List[BaseMessage]
@@ -205,7 +205,7 @@ def localDialog(state: SystemState)->dict:
     }
 ```
 
-6) <span style="color: green;">**systematization**</span> - узел систематизации полученных ответов через LCEL с использование Pydantic для структурированного вызова от gpt-5.4-mini: [calss AnalyzeDialog(BaseModel)](#an-di)
+6) 🟢**systematization** - узел систематизации полученных ответов через LCEL с использование Pydantic для структурированного вызова от gpt-5.4-mini: [calss AnalyzeDialog(BaseModel)](#an-di)
 
    Возвращаемые данные: Отсутствуют
 
