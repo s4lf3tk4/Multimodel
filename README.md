@@ -42,11 +42,11 @@ Multimodel представляет собой граф, который испо
 
 #### Пояснение
 <div align = 'left'>
-<span style="color: green;">Зеленый цвет - узлы графа (прямоугльники на диаграмме)</span>
+<font color="green">Зеленый цвет - узлы графа (прямоугльники на диаграмме)</font>
 
-<span style="color: pink;">Розовый цвет - функция-роутер (ромбы на диаграмме)</span>
+<font color="pink">Розовый цвет - функция-роутер (ромбы на диаграмме)</font>
 
-1)  <span style="color: green;">**userInput**</span> - функция ввода сообщения пользователя
+1)  <font color="green">**userInput**</font> - функция ввода сообщения пользователя
    
       Возвращаемые данные  
          
@@ -294,7 +294,8 @@ ___
 
 ## Pydantic-модели, промпты и парсеры
 
-###  <a name="me-cl"></a> MessageClassify - pydantic-модель
+<a name="cl-me"></a>
+### MessageClassify - pydantic-модель
 </div>
 
 <div align = 'left'>
@@ -367,7 +368,8 @@ LCEL - схема
 
 ___
 
-### <a name="an-di"></a> Типы сообщений AnalyzeDialog - pydantic-модель
+<a name="an-di"></a>
+### Типы сообщений AnalyzeDialog - pydantic-модель
 
 </div>
 
