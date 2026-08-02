@@ -8,4 +8,14 @@ initial_state = {
         "current_message": "",
         "message_type": "",
     }
-app.invoke(initial_state)
+
+
+final_state = None
+try:
+    final_state = app.invoke(initial_state)
+    print("-"*50)
+    print(f"Чат завершен, сообщений: {len(final_state['messages'])}")
+except KeyboardInterrupt:
+        print("Чат прерван ctrl + c.")
+except Exception as e:
+     print(f"Ошибка в работае чата: {e}")

@@ -13,7 +13,6 @@ def userInput(state: SystemState)->dict:
     return {
         "messages": new_messages,
         "current_message": user_input,
-        "should_continue": True
     }
 
 def classifyMessage(state: SystemState)-> dict:
