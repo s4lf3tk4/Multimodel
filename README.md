@@ -83,7 +83,7 @@ def routerAfterInput(state: SystemState)->str:
          return "classify"
 ```
 
-3) 🟢**classifyMessage** - классификация сообщений через LCEL с использование Pydantic для структурированного вызова: [calss ClassifyMessage(BaseModel)](#cl-me)
+3) 🟢**classifyMessage** - классификация сообщений через LCEL с использование Pydantic для структурированного вызова: [class ClassifyMessage(BaseModel)](#cl-me)
 
       Возвращаемые данные   
 - message_type: str - [Типы сообщений](#message-types)
@@ -205,7 +205,7 @@ def localDialog(state: SystemState)->dict:
     }
 ```
 
-6) 🟢**systematization** - узел систематизации полученных ответов через LCEL с использование Pydantic для структурированного вызова от gpt-5.4-mini: [calss AnalyzeDialog(BaseModel)](#an-di)
+6) 🟢**systematization** - узел систематизации полученных ответов через LCEL с использование Pydantic для структурированного вызова от gpt-5.4-mini: [class AnalyzeDialog(BaseModel)](#an-di)
 
    Возвращаемые данные: Отсутствуют
 
