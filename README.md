@@ -46,7 +46,7 @@ Multimodel представляет собой граф, который испо
 
 <span style="color: pink;">Розовый цвет - функция-роутер (ромбы на диаграмме)</span>
 
-1.  <span style="color: green;">**userInput**</span> - функция ввода сообщения пользователя
+1)  <span style="color: green;">**userInput**</span> - функция ввода сообщения пользователя
    
       Возвращаемые данные  
          
@@ -83,7 +83,7 @@ def routerAfterInput(state: SystemState)->str:
          return "classify"
 ```
 
-1) <span style="color: green;">**classifyMessage**</span> - классификация сообщений через LCEL с использование Pydantic для структурированного вызова: [calss ClassifyMessage(BaseModel)](#ClassifyMessage)
+3) <span style="color: green;">**classifyMessage**</span> - классификация сообщений через LCEL с использование Pydantic для структурированного вызова: [calss ClassifyMessage(BaseModel)](#cl-me)
 
       Возвращаемые данные   
 - message_type: str - [Типы сообщений](#message-types)
@@ -205,7 +205,7 @@ def localDialog(state: SystemState)->dict:
     }
 ```
 
-1) <span style="color: green;">**systematization**</span> - узел систематизации полученных ответов через LCEL с использование Pydantic для структурированного вызова от gpt-5.4-mini: [calss AnalyzeDialog(BaseModel)](#AnalyzeDialog)
+6) <span style="color: green;">**systematization**</span> - узел систематизации полученных ответов через LCEL с использование Pydantic для структурированного вызова от gpt-5.4-mini: [calss AnalyzeDialog(BaseModel)](#an-di)
 
    Возвращаемые данные: Отсутствуют
 
@@ -262,7 +262,7 @@ ___
 </div>
 
 #### Диаграмма модулей + импортируемые поля
-![Граф](141756.png)
+![Граф](readme/141756.png)
 
 ___
 
@@ -294,7 +294,7 @@ ___
 
 ## Pydantic-модели, промпты и парсеры
 
-###  <a name="MessageClassify"></a> MessageClassify - pydantic-модель
+###  <a name="me-cl"></a> MessageClassify - pydantic-модель
 </div>
 
 <div align = 'left'>
@@ -359,7 +359,7 @@ LCEL - схема
 
 <div align = 'center'> 
 
-![Граф](161721.png)
+![Граф](readme/161721.png)
 
 </div>
 
@@ -367,7 +367,7 @@ LCEL - схема
 
 ___
 
-### <a name="AnalyzeDialog"></a> Типы сообщений AnalyzeDialog - pydantic-модель
+### <a name="an-di"></a> Типы сообщений AnalyzeDialog - pydantic-модель
 
 </div>
 
@@ -435,7 +435,7 @@ LCEL - схема
 
 <div align = 'center'> 
 
-![Граф](160502.png)
+![Граф](readme/160502.png)
 
 </div>
 
