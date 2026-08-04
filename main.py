@@ -1,5 +1,4 @@
-from GraphCompile import graph
-
+from graph import graph
 
 app = graph.compile()
 

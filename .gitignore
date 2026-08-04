@@ -5,7 +5,6 @@ __pycache__/
 *.class
 *.so
 .Python
-venv/
 env/
 .env
 environment.env

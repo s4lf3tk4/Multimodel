@@ -1,6 +1,6 @@
-from bundle import SystemState
+from core import SystemState
 from langchain_core.messages import SystemMessage, HumanMessage, BaseMessage, AIMessage
-from config import llm_gpt_40
+from core import llm_gpt_40
 
 def codeAnswer(state: SystemState)->dict:
     user_input = state["current_message"]

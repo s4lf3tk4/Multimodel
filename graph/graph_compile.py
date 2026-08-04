@@ -1,12 +1,13 @@
 from langgraph.graph import StateGraph, START, END
-from Nodes import userInput, classifyMessage
-from Routers import routerAfterInput, routerAfterClassification
-from CodeAnswer import codeAnswer
-from Dialog import dialog
-from DialogOver import dialogOver
-from LocalDialog import localDialog
-from Systematization import systematization
-from bundle import SystemState
+from graph.nodes import userInput, classifyMessage
+from graph.routers import routerAfterInput, routerAfterClassification
+from providers import codeAnswer
+from providers import dialog
+from providers import dialogOver
+from providers import localDialog
+from providers import systematization
+from core import SystemState
+
 graph = StateGraph(SystemState)
 
 graph.add_node("userInput", userInput)

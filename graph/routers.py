@@ -1,4 +1,4 @@
-from bundle import SystemState
+from core import SystemState
 
 def routerAfterInput(state: SystemState)->str:
     current_message = state["current_message"]

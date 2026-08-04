@@ -1,8 +1,7 @@
-from bundle import SystemState, classification_prompt, classification_parser
+from core import SystemState, classification_prompt, classification_parser
+from core import llm_mistral
 from langgraph.graph import StateGraph, START, END
 from langchain_core.messages import HumanMessage
-from CodeAnswer import codeAnswer
-from config import llm_mistral
 
 def userInput(state: SystemState)->dict:
     user_input = input("Вы: ").strip()

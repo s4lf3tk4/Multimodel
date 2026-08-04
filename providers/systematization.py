@@ -1,6 +1,6 @@
-from bundle import SystemState,analyzeDialog_parser, analyzeDialog_prompt
+from core import SystemState,analyzeDialog_parser, analyzeDialog_prompt
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
-from config import llm_gpt_54
+from core import llm_gpt_54
 
 def systematization(state: SystemState)->None:
     code = state.get("code", "")

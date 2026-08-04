@@ -1,6 +1,6 @@
-from bundle import SystemState
+from core import SystemState
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
-from config import llm_mistral
+from core import llm_mistral
 
 def dialogOver(state: SystemState)->None:
     user_input = state["current_message"]
