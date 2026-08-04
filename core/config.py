@@ -1,11 +1,9 @@
 from langchain_openai import ChatOpenAI
 from langchain_ollama import ChatOllama
-from dotenv import load_dotenv
-import os
-load_dotenv("environment.env")
+from core.settings import settings
 
-BASE_URL = "https://api.chatanywhere.tech/v1"
-API_KEY = os.getenv("CHATANYWHERE_API_KEY")
+BASE_URL = settings.base_url
+API_KEY = settings.chatanywhere_api_key
 
 #code
 llm_gpt_40 = ChatOpenAI(
@@ -32,6 +30,6 @@ llm_gpt_41 = ChatOpenAI(
 #dialog+analysis
 llm_mistral = ChatOllama(
     model="mistral",
-     base_url="http://localhost:11434",
+    base_url="http://localhost:11434",
     num_predict=2000
 )

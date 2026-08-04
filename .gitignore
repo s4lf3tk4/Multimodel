@@ -1,4 +1,5 @@
 venv/
+readme/
 # Python
 __pycache__/
 *.py[cod]
